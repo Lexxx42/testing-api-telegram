@@ -12,3 +12,9 @@ Install requirements
 ```shell
 pip install -r requirements.txt
 ```
+
+To run tests use the following command
+
+```shell
+pytest .
+```
