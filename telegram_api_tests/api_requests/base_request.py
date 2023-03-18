@@ -1,5 +1,5 @@
 import requests
-from .env_loader import BOT_TOKEN, TEST_USER_ID
+from .token_loader import BOT_TOKEN
 
 
 class BaseRequest():
@@ -9,9 +9,13 @@ class BaseRequest():
         self.url = url
         self.response = None
         self.token = BOT_TOKEN
-        self.user_id = TEST_USER_ID
+        self.params = {key: value for key, value in kwargs.items()}
 
     def send(self):
         if self.method_req == 'get':
             self.response = requests.get(self.url + self.token + '/' + self.method_api)
+            return self.response
+        if self.method_req == 'post':
+            self.response = requests.post(self.url + self.token + '/' + self.method_api,
+                                          data=self.params)
             return self.response
