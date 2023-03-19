@@ -1,6 +1,5 @@
 import json
 from .base_request_post import BaseRequestPost
-from .expected_results import ExpectedSendMessage as esm
 from .expected_results import ExpectedBaseRequest as ebr
 
 
