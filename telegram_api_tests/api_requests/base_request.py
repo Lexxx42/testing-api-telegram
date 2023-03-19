@@ -1,5 +1,5 @@
 import requests
-from .token_loader import BOT_TOKEN
+from .loader import BOT_TOKEN
 from .expected_results import ExpectedBaseRequest as ebr
 
 

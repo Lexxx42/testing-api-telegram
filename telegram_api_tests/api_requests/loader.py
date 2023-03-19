@@ -1,3 +1,5 @@
+""" This module is for getting environment variables from .env file. """
+
 import os
 from dotenv import load_dotenv
 from pathlib import Path
@@ -13,3 +15,4 @@ BASEDIR = get_project_root()
 load_dotenv(os.path.join(BASEDIR, '.env'))
 
 TEST_USER_ID = os.getenv('TEST_USER_ID')
+BOT_TOKEN = os.getenv('BOT_TOKEN')
