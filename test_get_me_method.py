@@ -41,5 +41,3 @@ class TestGetMeMethod():
 
     def should_be_correct_supports_inline_queries_status(self):
         request.should_be_correct_can_read_all_group_messages_status()
-
-
