@@ -1,3 +1,6 @@
+from .loader import TEST_USER_ID
+
+
 class ExpectedBaseRequest():
     STATUS_OK = True
     STATUS_CODE = 200
@@ -12,5 +15,6 @@ class ExpectedGetMe():
     CAN_READ_ALL_MESSAGES = False
     IS_SUPPORT_INLINE_QUERIES = False
 
+
 class ExpectedSendMessage():
-    BOT_ID = 5623238635
+    RECEIVER_ID = int(TEST_USER_ID)
