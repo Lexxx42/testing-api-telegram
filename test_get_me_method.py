@@ -1,15 +1,10 @@
 '''
-API tests
-\nCommand to start all tests: pytest .
+API tests for getMe method
 \nCommand to start getMe tests: pytest . -m getme
 '''
 
-import os
 import pytest
-from dotenv import load_dotenv
 from telegram_api_tests.api_requests.get_me import GetMeRequest
-
-TEST_USER_ID = os.getenv('TEST_USER_ID')
 
 
 @pytest.mark.getme
@@ -47,8 +42,4 @@ class TestGetMeMethod():
     def should_be_correct_supports_inline_queries_status(self):
         request.should_be_correct_can_read_all_group_messages_status()
 
-# def test_send_message():
-#     request = BaseRequest('sendMessage', 'post', chat_id=TEST_USER_ID, text='test')
-#     res = request.send()
-#     print(res.status_code)
-#     print(res.text)
+
