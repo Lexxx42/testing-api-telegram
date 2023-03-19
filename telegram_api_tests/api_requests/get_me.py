@@ -1,9 +1,9 @@
 import json
-from .base_request import BaseRequest
+from .base_request_get import BaseRequestGet
 from .expected_results import ExpectedGetMe as egm
 
 
-class GetMeRequest(BaseRequest):
+class GetMeRequest(BaseRequestGet):
     def should_be_correct_can_join_groups_status(self):
         assert self.response.json()['result']['can_join_groups'] == egm.CAN_JOIN_GROUPS, \
             f'can_join_groups in response shold be {egm.CAN_JOIN_GROUPS},' \
