@@ -32,4 +32,4 @@ Testing of Telegram API with PyTest and Postman
 ## Results
 
 * [Postman solution](Postman_solution.md)
-* [Pytest solution](Python_solution.md)
+* [Pytest solution](Pytest_solution.md)
