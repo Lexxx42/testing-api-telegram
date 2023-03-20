@@ -20,3 +20,13 @@ class BaseRequest():
         assert self.response.status_code == ebr.STATUS_CODE, \
             f'Response status code ok with method {self.method_api} should be {ebr.STATUS_CODE},' \
             f' but got {self.response.status_code}'
+
+    def should_be_result_of_request_in_response(self):
+        assert self.is_result_of_request_in_response(), 'should be result of request but got nothing'
+
+    def is_result_of_request_in_response(self):
+        try:
+            self.response.json()['result']
+        except KeyError:
+            return False
+        return True

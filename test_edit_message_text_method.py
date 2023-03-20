@@ -6,7 +6,6 @@ API tests for editMessageText method
 import pytest
 from telegram_api_tests import TEST_USER_ID
 from telegram_api_tests.api_requests.edit_message import EditMessageTextRequest
-from telegram_api_tests.api_requests.send_message import SendMessageRequest
 
 
 @pytest.mark.editmessage
@@ -14,7 +13,7 @@ class TestEditMessageTextMethod():
     @pytest.fixture(scope="class", autouse=True)
     def setup(self):
         global request
-        request = SendMessageRequest('sendMessage', chat_id=TEST_USER_ID, text='test message')
+        request = EditMessageTextRequest('sendMessage', chat_id=TEST_USER_ID, text='test message')
         request.send()
         request.should_be_status_ok()
         request.should_be_status_code_200()
@@ -28,6 +27,9 @@ class TestEditMessageTextMethod():
 
     def test_edit_message_text_request_should_return_status_code_200(self):
         request.should_be_status_code_200()
+
+    def test_edit_message_text_request_should_return_result_of_request(self):
+        request.should_be_result_of_request_in_response()
 
     def test_edit_message_text_request_should_return_correct_bot_id(self):
         request.should_be_correct_id_of_bot()
