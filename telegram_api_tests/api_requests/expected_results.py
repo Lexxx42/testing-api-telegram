@@ -18,3 +18,8 @@ class ExpectedGetMe():
 
 class ExpectedSendMessage():
     RECEIVER_ID = int(TEST_USER_ID)
+    RECEIVER_FIRST_NAME = 'Alex̷͍͉̤͆̑̌͒͝ander'
+    RECEIVER_LAST_NAME = 'Konukђov'
+    RECEIVER_USERNAME = 'Lexx_042'
+    CHAT_TYPE = 'private'
+    MESSAGE_TEXT = 'test message'
