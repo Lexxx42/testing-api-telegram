@@ -13,10 +13,10 @@ class BaseRequest():
 
     def should_be_status_ok(self):
         assert self.response.json()['ok'] == ebr.STATUS_OK, \
-            f'Response status ok with method {self.method_api} shold be {ebr.STATUS_OK},' \
+            f'Response status ok with method {self.method_api} should be {ebr.STATUS_OK},' \
             f' but got {self.response.json()["ok"]}'
 
     def should_be_status_code_200(self):
         assert self.response.status_code == ebr.STATUS_CODE, \
-            f'Response status code ok with method {self.method_api} shold be {ebr.STATUS_CODE},' \
+            f'Response status code ok with method {self.method_api} should be {ebr.STATUS_CODE},' \
             f' but got {self.response.status_code}'
