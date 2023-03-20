@@ -23,3 +23,7 @@ class ExpectedSendMessage():
     RECEIVER_USERNAME = 'Lexx_042'
     CHAT_TYPE = 'private'
     MESSAGE_TEXT = 'test message'
+
+
+class ExpectedEditMessageText():
+    EDITED_MESSAGE_TEXT = 'edited message'
