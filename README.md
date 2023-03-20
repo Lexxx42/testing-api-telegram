@@ -18,13 +18,18 @@ Testing of Telegram API with PyTest and Postman
 
 1. Create a collection and environment variables
 2. Implement Methods
-    - API authorization for the created bot
-    - send a message
-    - edit message
-    - deleting a message
+    * API authorization for the created bot
+    * send a message
+    * edit message
+    * deleting a message
 
 ### Requirements:
 
 * URL implement as a variable
 * Implement checks in the Test tab
 * Implement preconditions in Pre-request script tab
+
+## Results
+
+* [Postman solution](Postman_solution.md)
+* [Pytest solution](Python_solution.md)
