@@ -21,6 +21,9 @@ class TestGetMeMethod():
     def test_get_me_request_should_return_status_code_200(self):
         request.should_be_status_code_200()
 
+    def test_get_me_request_should_return_result_of_request(self):
+        request.should_be_result_of_request_in_response()
+
     def test_get_me_request_should_return_correct_bot_id(self):
         request.should_be_correct_id_of_bot()
 
